@@ -4,11 +4,13 @@ This repo is for CodePath's CYB102 capstone. We're investigating the BOTS v1 dat
 
 | Name | Role | Data Sources |
 | ---- | ---------------- | --------- |
-| Elvis Valcarcel | Environment/caseboard setup, GitHub repo, detections | All (setup) |
+| Elvis Valcarcel | Environment/case board setup, GitHub repo, detections | All (setup) |
 | Rim Chebbaki | Web server incident | Suricata, HTTP Traffic ( stream:http), FortiGate firewall, IIS |
 | Marcus Veloso | Workstation incident | Sysmon, Windows event logs, registry |
 | Archa Mehta | Threat intel | VirusTotal, MITRE ATT&CK |
 | Pranika Kalluru | IR lead: case board, playbook, & report | Case board + everyone's findings |
+
+**Case board:** [Data Dig Case Board](https://github.com/users/ElvisValcarcel/projects/5). Every finding gets logged with a screenshot and the exact search used. (Uses PICERL)
 
 ## Setup 
 
@@ -88,7 +90,7 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 Use the information in this section to start your work, and expand out from there. 
 
-**For Rim and Marcus**: When you find something, post it on the caseboard with a screenshot and the exact search you used. These searches become our detections later.
+**For Rim and Marcus**: When you find something, post it on the [case board](https://github.com/users/ElvisValcarcel/projects/5) with a screenshot and the exact search you used. These searches become our detections later.
 
 ### Everyone: check environment
 
@@ -149,11 +151,11 @@ Which machines had registry activity?
 
 ### Archa: threat intelligence
 
-Collect the IPs, domains, and file hashes that Rim and Marcus post on the caseboard. Cross reference them on [VirusTotal](https://www.virustotal.com) and map behaviors to [MITRE ATT&CK](https://attack.mitre.org). If something turns up nothing, write down where you looked. That still counts for the Threat Intelligence section.
+Collect the IPs, domains, and file hashes that Rim and Marcus post on the [case board](https://github.com/users/ElvisValcarcel/projects/5/views/1). Cross reference them on [VirusTotal](https://www.virustotal.com) and map behaviors to [MITRE ATT&CK](https://attack.mitre.org). If something turns up nothing, write down where you looked. That still counts for the Threat Intelligence section.
 
 ### Pranika: incident response lead
 
-Manage the case board (Projects tab):
+Manage the [case board](https://github.com/users/ElvisValcarcel/projects/5):
 - One issue per incident with a PICERL checklist
 - As Rim and Marcus post findings, put the events in order to build the attack timeline,
 - Afterwards, write out the Containment, Eradication, and Recovery recommendations for each incident
@@ -161,6 +163,6 @@ Manage the case board (Projects tab):
 
 ---
 
-## Repo layout (coming soon TM)
+## Repo layout (coming soon) 
 - `detections/`: saved Splunk searches for each attack behavior, mapped to ATT&CK
 - `tests/`: automated tests that check each detection catches the attack in BOTS v1
