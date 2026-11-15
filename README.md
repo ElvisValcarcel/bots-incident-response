@@ -157,7 +157,8 @@ Collect the IPs, domains, and file hashes that Rim and Marcus post on the [case 
 
 Manage the [case board](https://github.com/users/ElvisValcarcel/projects/5):
 - One issue per incident with a PICERL checklist
-- As Rim and Marcus post findings, put the events in order to build the attack timeline,
+- Move each case across the columns as it progresses in sequential order: New -> Investigating -> Contained -> Closed
+- As Rim and Marcus post findings, put the events in order to build the attack timeline
 - Afterwards, write out the Containment, Eradication, and Recovery recommendations for each incident
 - Lessons learned becomes our recommended remediation answer
 
